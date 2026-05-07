@@ -50,3 +50,6 @@ TagManager:
   - name: Characters
     uniqueID: 2405080215
     locked: 0
+  - name: Ignore
+    uniqueID: 3761667547
+    locked: 0
