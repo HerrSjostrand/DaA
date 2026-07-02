@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 414354111}
   - component: {fileID: 414354110}
   - component: {fileID: 414354109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u0437\u0430\u0434\u043D\u0438\u043A_0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,10 +630,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -642,9 +642,9 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 1
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!114 &765179667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,6 +660,7 @@ MonoBehaviour:
   rb: {fileID: 765179666}
   sr: {fileID: 765179670}
   moveSpeed: 0.7
+  jumpForce: 15
   move: {fileID: 2382639424771597124, guid: 251a4b2d74bd4cb4b854c22a891ce18a, type: 3}
 --- !u!114 &765179668
 MonoBehaviour:
@@ -687,9 +688,37 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 765179667}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: fd1db58d-b7f7-4d8a-9eac-91c000e40047
     m_ActionName: Player/Walk[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 765179667}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: af779101-28ac-437f-850e-d4ecd1a8f073
+    m_ActionName: Player/Jump
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: 
@@ -975,7 +1004,7 @@ Transform:
   m_GameObject: {fileID: 839515663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.001265049, y: -0.0056604147, z: -10}
+  m_LocalPosition: {x: -0.0019142628, y: -0.03105104, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1457,7 +1486,7 @@ GameObject:
   - component: {fileID: 1815548660}
   - component: {fileID: 1815548659}
   - component: {fileID: 1815548661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u0437\u0435\u043C\u043B\u044F (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2206,6 +2235,7 @@ SceneRoots:
   - {fileID: 1476270993}
   - {fileID: 1222234097}
   - {fileID: 1770779667}
+  - {fileID: 765179671}
   - {fileID: 1090558240}
   - {fileID: 1815548660}
   - {fileID: 1023149390}
@@ -2213,7 +2243,6 @@ SceneRoots:
   - {fileID: 414354111}
   - {fileID: 8020584991918075154}
   - {fileID: 508104300843351918}
-  - {fileID: 765179671}
   - {fileID: 7929937940310526706}
   - {fileID: 229422744}
   - {fileID: 7588512628375703739}
