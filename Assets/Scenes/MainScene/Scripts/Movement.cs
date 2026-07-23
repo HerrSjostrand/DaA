@@ -46,10 +46,7 @@ public class Movement : MonoBehaviour
         if (IsGrounded())
         {
             animator.SetBool("IsJumping", false);
-            animator.SetBool("IsFalling", true);
         }
-
-        Debug.Log(IsGrounded());
     }
 
     void FixedUpdate()
