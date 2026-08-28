@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class Movement : MonoBehaviour
         {
            animator.SetBool("IsWalking", false); 
         }
-        if (!IsGrounded())
+        if (SceneManager.GetActiveScene().name != "MainScene" && !IsGrounded())
         {
             animator.SetBool("IsJumping", true);
             animator.SetBool("IsWalking", false);
